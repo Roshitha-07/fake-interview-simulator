@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Fake Interview Simulator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Start Screen -->
+  <div class="card" id="startScreen">
+    <h1>🎤 Fake Interview Simulator</h1>
+    <p>Answer questions under interview pressure</p>
+    <button onclick="startInterview()">Start Interview</button>
+  </div>
+
+  <!-- Interview Screen -->
+  <div class="card hidden" id="interviewScreen">
+    <div class="timer" id="timer">Time: 60</div>
+    <h2 id="question"></h2>
+    <textarea id="answer" placeholder="Type or speak your answer..."></textarea>
+
+    <div class="btn-row">
+      <button onclick="startVoice()">🎙 Speak</button>
+      <button onclick="nextQuestion()">Next</button>
+    </div>
+  </div>
+
+  <!-- Result Screen -->
+  <div class="card hidden" id="resultScreen">
+    <h2>Interview Result</h2>
+    <h3 id="finalScore"></h3>
+    <p id="feedback"></p>
+    <button onclick="location.reload()">Restart</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
